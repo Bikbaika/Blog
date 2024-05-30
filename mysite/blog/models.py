@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
 
@@ -8,6 +9,8 @@ class PublishedManager(models.Manager):
 
 class Post(models.Model):
 
+    def get_absolute_url(self):
+        return reverse('blog:post_detail', args=[self.id])
     class Status(models.TextChoices):
         DRAFT = 'DF', 'Draft'
         PUBLISHED = 'PB', 'Published'
