@@ -25,6 +25,11 @@ SECRET_KEY = 'django-insecure-ia62^0p__@az*s)^yiw4^-8f3@z4_3)n6uk)8!mpb0lk+hnh8x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_REDIRECT_URL='account:dashboard'
+LOGIN_URL='account:login'
+LOGOUT_URL='account:logout'
+
+
 ALLOWED_HOSTS = []
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -37,6 +42,8 @@ EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = [
+    
+    'account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'taggit',
-    'account'
+ 
 ]
 
 MIDDLEWARE = [
