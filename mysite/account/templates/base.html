@@ -11,7 +11,10 @@
     <div id="header">
         {% if request.user.is_authenticated %}
         Привет {{request.user.first_name|default:request.user.username}},
-        <a href ="{% url "account:logout" %}"> Выйти </a>
+        <form action="{% url 'account:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Выйти</button>
+        </form>
         {% else %}
         <a href ="{% url "account:login" %}"> Войти </a>
         {% endif %}
