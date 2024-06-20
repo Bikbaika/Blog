@@ -13,5 +13,10 @@
         {% csrf_token %}
         <input type="submit" value="Вход">
     </form>
+    <p>
+        <a href="{% url "account:password_reset" %}">
+            Забыли пароль?
+        </a>
+    </p>
 </div>
 {% endblock %}
