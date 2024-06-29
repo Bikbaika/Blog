@@ -2,7 +2,9 @@
 {% block title %} Log in {% endblock %}
 {%block content%}
 <h1>Login</h1>
-<p>Заполните форму входа</p>
+<p>Заполните форму входа
+   Если у Вас нет аккаунта, Вы можете <a href=" {% url "account:register" %}">зарегистрироваться</a>.
+</p>
 <form method="post">
     {{form.as_p}}
     {% csrf_token %}

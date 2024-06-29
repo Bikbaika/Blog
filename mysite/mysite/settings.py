@@ -29,6 +29,8 @@ LOGIN_REDIRECT_URL='account:dashboard'
 LOGIN_URL='account:login'
 LOGOUT_URL='account:logout'
 
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 ALLOWED_HOSTS = []
 
@@ -38,6 +40,14 @@ EMAIL_HOST_USER = 'Kaleria4444@gmail.com'
 EMAIL_HOST_PASSWORD = 'eqlz qbdr nuaa xlae'
 EMAIL_POST = 587
 EMAIL_USE_TLS = True
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.ScryptPasswordHasher',
+]
 
 # Application definition
 

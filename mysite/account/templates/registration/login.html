@@ -5,7 +5,8 @@
 {% if form.errors %}
 <p>Ваш логин и пароль не совпадают, попробуйте снова</p>
 {% else %}
-<p>Пожалуйста, заполните форму входа<p>
+<p>Пожалуйста, заполните форму входа. </p>
+<p> Если у Вас нет аккаунта, Вы можете <a href=" {% url "account:register" %}">зарегистрироваться</a>.</p>
 {% endif %}
 <div class="login-form">
     <form action="{% url 'account:login' %}" method="post">
