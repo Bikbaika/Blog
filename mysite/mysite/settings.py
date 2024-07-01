@@ -29,6 +29,11 @@ LOGIN_REDIRECT_URL='account:dashboard'
 LOGIN_URL='account:login'
 LOGOUT_URL='account:logout'
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend'
+]
+
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 

@@ -4,6 +4,6 @@
 
 {%block content%}
 <h1>Личный кабинет</h1>
-<p>Добро пожаловать!
+<p>Добро пожаловать! Вы можете <a href="{% url 'account:edit' %}"> редактировать Ваш профиль </a> или <a href="{% url 'account:password_change' %}"> поменять пароль <a>.
 </p>
 {% endblock %}
