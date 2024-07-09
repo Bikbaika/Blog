@@ -31,13 +31,14 @@ LOGOUT_URL='account:logout'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'account.authentication.EmailAuthBackend'
+    'account.authentication.EmailAuthBackend',
+    'social_core.backends.google.GoogleOAuth2',
 ]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -56,6 +57,9 @@ PASSWORD_HASHERS = [
 
 # Application definition
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '528499544933-hoqjupogrq91jqn9mekaut6mbgddjf7u.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
 INSTALLED_APPS = [
     
     'account',
@@ -67,6 +71,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'taggit',
+    'social_django',
+    'django_extensions',
  
 ]
 
