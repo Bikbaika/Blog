@@ -57,8 +57,6 @@ PASSWORD_HASHERS = [
 
 # Application definition
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '528499544933-hoqjupogrq91jqn9mekaut6mbgddjf7u.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
 
 INSTALLED_APPS = [
     
