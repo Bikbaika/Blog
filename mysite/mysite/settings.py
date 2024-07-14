@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'taggit',
     'social_django',
     'django_extensions',
+    'images'
  
 ]
 
